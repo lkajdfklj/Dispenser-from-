@@ -9,4 +9,5 @@ THEN..<br>
 
 ```
 pip install discord.py
-python main.py```
+python main.py
+```
