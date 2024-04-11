@@ -30,7 +30,7 @@ class SimpleView(discord.ui.View):
             await interaction.response.send_message("Successfully sent dm.", ephemeral=True)
 
 
-@bot.command()
+@bot.hybrid_command()
 async def panel(ctx):
     if str(ctx.author.id) == "1002565312681611354":
         embed = discord.Embed(title="Dispenser", description="Click the button to get your link from the dispenser!",
@@ -38,6 +38,14 @@ async def panel(ctx):
         embed.set_footer(text="Dispenser", icon_url=bot.user.avatar.url)
         view = SimpleView()
         await ctx.send(embed=embed, view=view)
+
+@bot.command(name="sync")
+async def sync(ctx):
+    if str(ctx.author.id) == '1002565312681611354':
+        synced = await bot.tree.sync()
+        await ctx.send(f"Synced {len(synced)} command(s).")
+    else:
+        await ctx.send("Error: You don't have permissions to run this command!")
 
 
 @bot.event
