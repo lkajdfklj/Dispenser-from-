@@ -54,4 +54,4 @@ async def on_ready():
     print(f"Logged in as {bot.user}")
 
 
-bot.run('MTIyMzY5NzAzNjM2MTMzODkzMA.G8ZhCt.Ivbt-rYyHd0kxQihFWiEDTDsCoqZQ8TeN2gJIk')
+bot.run('BOT_TOKEN')
