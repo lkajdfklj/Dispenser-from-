@@ -26,3 +26,5 @@ Finally.
 # Things to Add
 <li>Report Button</li>
 <li>Cooldown</li>
+
+Credit to Celestial
